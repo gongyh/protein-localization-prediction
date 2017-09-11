@@ -10,8 +10,8 @@ from sklearn.externals import joblib
 # In[2]:
 # loading the data
 
-train = pd.read_csv('../datasets/dataset_csv/train.csv')
-test = pd.read_csv('../datasets/dataset_csv/test.csv')
+train = pd.read_csv('../datasets/dataset_iloc/train.csv')
+test = pd.read_csv('../datasets/dataset_iloc/test.csv')
 train.loc[train["class"]=="chloroplast","class"]=0
 train.loc[train["class"]=="cytoplasmic","class"]=1
 train.loc[train["class"]=="ER","class"]=2
@@ -52,7 +52,7 @@ X_te = test.drop(['class', 'name', 'sequence'], axis=1)
 # In[3]:
 
 
-gcf = gcForest(n_cascadeRFtree=300,n_mgsRFtree=200,shape_1X=72,
+gcf = gcForest(n_cascadeRFtree=1000,n_mgsRFtree=1000,shape_1X=72,
                window=[5,9,18],min_samples_mgs=10, min_samples_cascade=7)
 joblib.dump(gcf, 'gcf_model.sav')
 #X_tr = X_tr.as_matrix()
