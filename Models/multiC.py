@@ -55,8 +55,8 @@ from sklearn.manifold.t_sne import TSNE
 # train and test data
 # here we will be using pandas library to read the input data in the form of CSV
 
-train = pd.read_csv('../datasets/dataset_csv/train.csv')
-test = pd.read_csv('../datasets/dataset_csv/test.csv')
+train = pd.read_csv('../datasets/dataset_ilov/train.csv')
+test = pd.read_csv('../datasets/dataset_iloc/test.csv')
 train.loc[train["class"]=="chloroplast","class"]=0
 train.loc[train["class"]=="cytoplasmic","class"]=1
 train.loc[train["class"]=="ER","class"]=2
