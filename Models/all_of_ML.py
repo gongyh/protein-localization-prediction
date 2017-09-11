@@ -88,8 +88,8 @@ def svm_cross_validation(train_x, train_y):
         
 if __name__ == '__main__':    
     print('reading training and testing data...')     
-    train = pd.read_csv('../datasets/dataset_csv/train.csv')
-    test = pd.read_csv('../datasets/dataset_csv/test.csv')
+    train = pd.read_csv('../datasets/dataset_iloc/train.csv')
+    test = pd.read_csv('../datasets/dataset_iloc/test.csv')
     train.loc[train["class"]=="chloroplast","class"]=0
     train.loc[train["class"]=="cytoplasmic","class"]=1
     train.loc[train["class"]=="ER","class"]=2
