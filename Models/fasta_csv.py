@@ -168,10 +168,10 @@ def main():
 	print("Test data size: %d" % y_test.shape[0])
 	test.insert(loc=2, column='class', value=y_test)
 
-	train.to_csv('../datasets/dataset_csv/train.csv', index=False)
-	test.to_csv('../datasets/dataset_csv/test.csv', index=False)
+	train.to_csv('../datasets/dataset_ilov/train.csv', index=False)
+	test.to_csv('../datasets/dataset_iloc/test.csv', index=False)
 	print("Blind test data size: %d" % blind_test.shape[0])
-	blind_test.to_csv('../datasets/dataset_csv/blind.csv', index=False)
+	blind_test.to_csv('../datasets/dataset_iloc/blind.csv', index=False)
 
 
 if __name__ == "__main__":
