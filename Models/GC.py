@@ -36,9 +36,9 @@ test.loc[test["class"]=="peroxisomal","class"]=8
 test.loc[test["class"]=="plasma_membrane","class"]=9
 test.loc[test["class"]=="vacuolar","class"]=10
 df = pd.DataFrame(train["class"])
-df.to_csv('../datasets/dataset_csv/train_int.csv', header=False, index=False)
+df.to_csv('../datasets/dataset_iloc/train_int.csv', header=False, index=False)
 df = pd.DataFrame(test["class"])
-df.to_csv('../datasets/dataset_csv/test_int.csv', header=False, index=False)
+df.to_csv('../datasets/dataset_iloc/test_int.csv', header=False, index=False)
 
 # Split into labels, names and data
 y_tr = train['class']
